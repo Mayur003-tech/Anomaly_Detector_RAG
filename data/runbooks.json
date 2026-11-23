@@ -1,0 +1,30 @@
+[
+  {
+    "id": "RB-001",
+    "title": "PostgreSQL Connection Pool Exhaustion",
+    "symptoms": "FATAL: remaining connection slots are reserved; TimeoutError acquiring connection from pool; HTTP 503",
+    "root_cause": "A traffic spike or unclosed database connections used up all available DB slots.",
+    "remediation": "Check idle connections in pg_stat_activity, restart leaking worker pods, or increase pool size."
+  },
+  {
+    "id": "RB-002",
+    "title": "Out of Memory (OOMKilled) Container",
+    "symptoms": "Exit code 137; OOMKilled; Memory usage exceeded container limit",
+    "root_cause": "A heavy job or memory leak exceeded the container RAM limit.",
+    "remediation": "Inspect recent large-payload requests, stream files instead of loading into RAM, or raise the memory limit."
+  },
+  {
+    "id": "RB-003",
+    "title": "Brute-Force Login Spike",
+    "symptoms": "401 Unauthorized repeated from single IP; Failed password for invalid user; >50 failed logins in 60s",
+    "root_cause": "Automated credential stuffing or brute-force attack hitting /login.",
+    "remediation": "Block the source IP at the firewall/WAF and verify rate limiting is enabled."
+  },
+  {
+    "id": "RB-004",
+    "title": "Normal Healthy Traffic",
+    "symptoms": "200 OK; Healthcheck passed; User logged in successfully; Cache hit; Scheduled job completed",
+    "root_cause": "Routine healthy system operation.",
+    "remediation": "No action required."
+  }
+]

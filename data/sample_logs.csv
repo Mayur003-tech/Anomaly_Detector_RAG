@@ -1,0 +1,11 @@
+timestamp,service,level,message
+2026-11-22T10:01:12Z,api-gateway,INFO,GET /api/v1/products 200 OK latency=42ms
+2026-11-22T10:02:05Z,auth-service,INFO,User user_4821 logged in successfully from 10.0.4.12
+2026-11-22T10:03:18Z,worker-node,INFO,Healthcheck passed: CPU=24% RAM=51%
+2026-11-22T10:04:44Z,db-proxy,ERROR,FATAL: remaining connection slots are reserved for non-replication superuser connections
+2026-11-22T10:05:29Z,auth-service,WARN,401 Unauthorized repeated 87 times in 45s from IP 198.51.100.77 for /login
+2026-11-22T10:06:15Z,ml-worker,CRITICAL,Container exited with code 137 (OOMKilled): memory usage 4096MiB / 4096MiB
+2026-11-22T10:07:02Z,ingress-nginx,ERROR,TLS handshake error from 203.0.113.19: x509: certificate has expired
+2026-11-22T10:08:33Z,billing-cron,INFO,Scheduled daily backup completed in 1.8s
+2026-11-22T10:09:48Z,log-shipper,ERROR,OSError: [Errno 28] No space left on device while writing to /var/log/app/events.log
+2026-11-22T10:10:20Z,api-gateway,INFO,POST /api/v1/cart 200 OK latency=65ms
